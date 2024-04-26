@@ -1,8 +1,11 @@
-# Create Amazon Product Review Sentiment Analysis / Flask Application
+# Create Amazon Product Review Sentiment Analysis / Create Flask Application
+
+
+## 1) Create Amazon Product Review Sentiment Analysis
 
 
 ### NOTE:   
-#### Download the Glove Embedding from Kaggle from here : https://www.kaggle.com/datasets/danielwillgeorge/glove6b100dtxt
+#### Download the Glove Embedding from Kaggle  here : https://www.kaggle.com/datasets/danielwillgeorge/glove6b100dtxt
 
 
 ## Project Overview
@@ -80,4 +83,64 @@ Future enhancements could include:
 - Implementing additional features such as sentiment intensity scoring.
 
 ## Contributor
- - Hassn Sattar 
+ - Hasan Sattar 
+
+
+
+# 2)  Create Flask Application/Deploy 
+
+### Overview
+This Flask application performs sentiment analysis on user-submitted reviews. It predicts whether the sentiment of the review is positive or negative using a pre-trained machine learning model and provides real-time feedback to the user.
+
+
+## Technologies and Techniques
+- **Flask**: A web framework used to create the web interface for submitting reviews and displaying sentiment analysis.
+- **TensorFlow/Keras**: For building, training, and loading the sentiment analysis model.
+- **Pickle**: For loading pre-processed tokenizer data necessary for text data preparation.
+- **HTML/CSS**: For creating and styling the web interface.
+
+## Installation and Setup
+Ensure you have Python installed, then follow these steps to set up the project:
+
+```bash
+# Clone the repository
+git clone https://github.com/your-repository/flask-sentiment-analysis.git
+
+
+# Install required packages
+pip install -r requirements.txt
+
+```
+
+
+## How to Run the Application
+
+```bash
+python app.py
+
+```
+
+Navigate to http://127.0.0.1:5000/ in your web browser to use the application.
+
+## Application Structure
+- **app.py**: Contains the Flask application setup, routes, and model loading logic.
+- **sentiment_model.h5**: The pre-trained TensorFlow/Keras model for sentiment analysis.
+- **tokenizer.pkl**: The tokenizer used for preprocessing the review text.
+- **requirements.txt**: List of Python packages required to run the application.
+- **templates/index.html**: The HTML template for the web interface.
+
+
+# Optional work (Deploy application on AWS Cloud Server )
+
+Deploying your Flask application on Amazon EC2.Here’s a detailed step-by-step guide on how to deploy your Flask app on Amazon EC2:
+
+- Log in to AWS Management Console and navigate to the EC2 Dashboard.
+- Click Launch Instance to create a new instance.
+- Select an Amazon Machine Image (AMI), such as Amazon Linux 2, which comes with essential tools pre-installed.
+- Choose an instance type (e.g., t2.micro for - testing purposes, which is eligible for the free tier).
+- Configure instance details such as network, subnet, and enable public IP.
+- Add storage if the default storage size is not sufficient for your application.
+Configure security groups:
+- Add a rule to allow SSH (port 22) from your IP address for secure shell access.
+- Add a rule to allow HTTP (port 80) and HTTPS (port 443) from anywhere (or specific IPs if you prefer more security).
+- Review and launch the instance by selecting a key pair for SSH access. If you don’t have a key pair, create a new one and download it to your machine.
