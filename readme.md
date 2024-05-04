@@ -43,7 +43,7 @@ To get started with this project, you need to install the required Python packag
 
 ```bash
 # Clone the repository
-git clone https://github.com/your-repository/amazon-sentiment-analysis.git
+git clone https://github.com/Hasansattar/Flaskapp_Amazon_Sentiment_Reviews.git
 cd amazon-sentiment-analysis
 
 ```
